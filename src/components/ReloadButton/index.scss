@@ -1,0 +1,23 @@
+@import "../../styles/mixin";
+
+.reload-comp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  // .reload-btn {
+    // @include flex();
+    // border-color: #999999;
+    // background-color: transparent;
+  // }
+
+  .text {
+    margin-left: 10px;
+    font-size: $font-size-sm;
+    color: #999999;
+    line-height: 100%;
+  }
+}

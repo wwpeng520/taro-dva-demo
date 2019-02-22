@@ -1,0 +1,160 @@
+/* colors */
+$color-primary : #00C2DE !default;
+$color-dark : #333 !default;
+$color-dark2 : #666 !default;
+$color-light : #999 !default;
+$color-light2 : #ccc !default;
+$color-theme-light: #C9E8EA !default;
+$color-border-light: #D5D5D5 !default;
+$color-bg-light: #f7f7f7 !default;
+$color-base-light: #9AD3DA;
+$color-base-dark: #1FB2C2;
+
+$color-red: #FF5B54;
+$color-pink: #FFCCCC;
+
+/* button-colors */
+$btn-active: #20B3BD !default;
+$btn-disabled: #CCC !default;
+
+$btn-disabled-1: mix(#fff, $btn-active, 70%) !default;
+/* 53a8ff */
+
+/* background-colors */
+$bg-color-base: #fff !default;
+$bg-color-light : #f9f9f9 !default; //页面浅灰背景&图片浅灰背景
+$bg-color-danger: #F9EFEF !default; //页面浅红背景&按钮边框
+$bg-color-panel: #C9E8EA !default;
+$bg-color-translucent-bk: rgba(0, 0, 0, 0.2);
+$bg-color-translucent-bk2: rgba(0, 0, 0, 0.6);
+$bg-color-translucent-wh: rgba(255, 255, 255, 0.5);
+
+/* tag-colors */
+$tag-primary:#20B3BD !default;
+$tag-dark:#555 !default;
+
+/** 
+* 尺寸
+*/
+$device-ratio: 750;
+$header-height: 60px;
+$block-area-width-sm: 6px;
+$block-area-width-md: 10px;
+$block-area-width-lg: 14px;
+$block-area-height-sm: 40px;
+$block-area-height-md: 50px;
+$block-area-height-lg: 60px;
+
+$col-width-lg: 240px;
+$col-width-md: 230px;
+
+$spacing-xs: 6px;
+$spacing-sm: 12px;
+$spacing-md: 18px;
+$spacing-lg: 30px;
+$spacing-xl: 42px;
+
+$padding-xs: 6px;
+$padding-sm: 10px;
+$padding-md: 15px;
+$padding-lg: 20px;
+$padding-xl: 30px;
+
+// 图片大小
+$avatar: 160px;
+$avatar-lg: 200px;
+$avatar-sm: 100px;
+
+// 字体大小
+$font-size-xxl: 38px;
+$font-size-xl: 34px;
+$font-size-lg: 30px;
+$font-size-md: 28px;
+$font-size-sm: 24px;
+$font-size-xs: 20px;
+
+/* methods */
+// 背景图片地址和大小 
+@mixin bg($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+// 定位上下左右居中
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 定位上下居中
+@mixin ct {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// 定位左右居中
+@mixin cl {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// 宽高
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// 字体大小，颜色
+@mixin sc($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+
+// flex 布局和 子元素 对其方式
+@mixin flex($flex-direction: row, $align-items: center, $justify-content: center) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+// 长度计算
+@function calcSize($val) {
+  @return $val/$device-ratio+'px';
+}
+
+@mixin limitLine($line: 2) {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+@mixin borderBox1px($color: $color-border-light, $radius: 6px) {
+  position: relative;
+  border: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1Px solid $color;
+    border-radius: $radius;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+  }
+}

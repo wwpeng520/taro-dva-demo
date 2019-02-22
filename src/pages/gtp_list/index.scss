@@ -1,0 +1,78 @@
+@import "../../styles/mixin";
+
+.collection-page {
+  @include wh(100%, 100%);
+  background-color: $color-bg-light;
+
+  .main-box {
+    background-color: #fff;
+    // height: 100vh;
+
+    .content-title {
+      font-size: $font-size-lg;
+      color: $color-dark2;
+      text-align: center;
+    }
+
+    .content-box {
+      @include flex(column, center, flex-start);
+      min-height: 80vh;
+
+      .list-item {
+        @include flex(column, flex-start);
+        margin: 0 $padding-lg $spacing-md $padding-lg;
+        padding-bottom: $spacing-sm;
+
+        .list-item-header {
+          @include flex(row, center, space-between);
+          width: 100%;
+          min-height: 80px;
+
+          .icon-box {
+            @include flex();
+            padding: $padding-sm;
+            margin-left: $padding-xs;
+          }
+
+          .icon-text {
+            margin-left: $padding-xs;
+            font-size: $font-size-sm;
+            color: $color-light;
+          }
+
+          .list-item-title {
+            margin-right: 10px;
+            font-size: $font-size-lg;
+            // font-weight: 300;
+            flex: 1;
+          }
+
+          .cancel-btn {
+            @include flex();
+            @include borderBox1px($radius: 60px);
+            border-color: $color-dark2;
+            border: none;
+            height: 50px;
+
+            .btn-text {
+              font-size: $font-size-xs;
+              font-weight: 300;
+              color: $color-dark2;
+            }
+          }
+        }
+
+        .list-item-description {
+          @include limitLine(2);
+          margin-top: $spacing-xs;
+          margin-bottom: $spacing-sm;
+          // text-indent: 2em;
+          font-size: $font-size-sm;
+          line-height: 38px;
+          color: $color-dark2;
+          // letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}

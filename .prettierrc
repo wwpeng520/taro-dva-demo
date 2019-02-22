@@ -1,0 +1,10 @@
+{
+  "singleQuote": true,
+  "eslintIntegration": true,
+  "tslintIntegration": true,
+  "semi": false,
+  "trailingComma": "none",
+  "jsx-quotes": 0,
+  "tabWidth": 2,
+  "printWidth": 120
+}

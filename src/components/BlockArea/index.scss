@@ -1,0 +1,7 @@
+@import "../../styles/mixin";
+
+.block-area-comp {
+  width: $block-area-width-sm;
+  height: $block-area-height-md;
+  background-color: $color-primary;
+}

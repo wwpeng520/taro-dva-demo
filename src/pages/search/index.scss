@@ -1,0 +1,70 @@
+@import "../../styles/mixin";
+
+.search-page {
+  @include wh(100%, 100%);
+  // @include flex(column, center, flex-start);
+  background-color: #fff;
+
+  .search-bar {
+    @include cl();
+    position: fixed;
+    width: 100%;
+  }
+
+  .main-box {
+    // height: 100vh;
+    padding-top: 100px;
+    box-sizing: border-box;
+    // border: 1px solid red;
+
+    .tag {
+      margin: 6px $spacing-sm;
+      font-size: $font-size-sm;
+    }
+
+    .content-title {
+      font-size: $font-size-lg;
+      color: $color-dark2;
+      text-align: center;
+      margin-top: 100px;
+      margin-bottom: 30%;
+    }
+
+    .content-box {
+      @include flex(column, center, flex-start);
+      // min-height: 80vh;
+      margin-top: $spacing-md;
+      background-color: #fff;
+
+      .list-item {
+        @include flex(column, flex-start);
+        margin: 0 $padding-lg $spacing-md $padding-lg;
+        padding-bottom: $spacing-sm;
+
+        .list-item-header {
+          @include flex(row, center, space-between);
+          width: 100%;
+          min-height: 80px;
+
+          .list-item-title {
+            margin-right: 10px;
+            font-size: $font-size-lg;
+            // font-weight: 300;
+            flex: 1;
+          }
+        }
+
+        .list-item-description {
+          @include limitLine(2);
+          margin-top: $spacing-xs;
+          margin-bottom: $spacing-sm;
+          // text-indent: 2em;
+          font-size: $font-size-sm;
+          line-height: 38px;
+          color: $color-dark2;
+          // letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}

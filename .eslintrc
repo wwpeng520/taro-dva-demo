@@ -1,0 +1,14 @@
+{
+  "extends": ["taro"],
+  "globals": {
+    "wx": true
+  },
+  "rules": {
+    "no-unused-vars": ["error", { "varsIgnorePattern": "Taro" }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+    "import/prefer-default-export": "off",
+    "import/no-commonjs": false
+  },
+  "parser": "babel-eslint",
+  "plugins": ["typescript"]
+}

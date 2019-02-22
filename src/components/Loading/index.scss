@@ -1,0 +1,65 @@
+@import "../../styles/mixin";
+
+.loading-comp {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .rotate-box {
+    -webkit-animation: myRotate 1s linear infinite;
+    animation: myRotate 1s linear infinite;
+  }
+
+  @-webkit-keyframes myRotate {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+
+    50% {
+      -webkit-transform: rotate(180deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @keyframes myRotate {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+
+    50% {
+      -webkit-transform: rotate(180deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  .text-sm {
+    margin-top: 10px;
+    font-size: 26px;
+    color: $color-dark;
+  }
+
+  .text-md {
+    margin-top: 16px;
+    font-size: 30px;
+    color: $color-dark;
+  }
+
+  .text-lg {
+    margin-top: 20px;
+    font-size: 34px;
+    color: $color-dark;
+  }
+
+
+}

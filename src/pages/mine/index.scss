@@ -1,0 +1,81 @@
+@import "../../styles/mixin";
+
+.mine-page {
+  @include wh(100%, 100%);
+  background-color: $color-bg-light;
+
+  .modal-btn {
+    border: none;
+  }
+
+  .user-header {
+    @include flex(column);
+    min-height: 200px;
+    padding: 30px 20px;
+    background-color: #ffffff;
+
+    .avatar {
+      width: $avatar;
+      height: $avatar;
+      border-radius: 50%;
+    }
+
+    .username {
+      margin-top: 10px;
+      font-size: 34px;
+    }
+
+    .error-info {
+      margin-top: 10px;
+      font-size: $font-size-sm;
+    }
+
+    .login-btn {
+      border-radius: 40px;
+      background-color: $color-primary;
+      border: none;
+    }
+
+    .tip {
+      margin-top: 16px;
+      font-size: $font-size-md;
+      color: $color-base-light;
+    }
+
+    .reload-btn {
+      @include flex();
+      margin-top: 10px;
+      border-color: #999999;
+      background-color: transparent;
+    }
+  }
+
+  .list-item-no-border.at-list__item {
+    &::after {
+      border-bottom: none;
+    }
+  }
+
+  .list-item.at-list__item {
+    font-size: $font-size-lg;
+    padding-top: $padding-sm;
+    padding-bottom: $padding-sm;
+
+    .item-content {
+      &__info {
+        &-note {
+          font-size: $font-size-sm;
+        }
+      }
+    }
+
+    .item-extra {
+      &__info {
+        font-size: $font-size-sm;
+        font-weight: 300;
+        color: $color-dark2;
+      }
+    }
+  }
+  
+}

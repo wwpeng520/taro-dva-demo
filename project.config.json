@@ -1,0 +1,14 @@
+{
+  "miniprogramRoot": "./dist",
+  "cloudfunctionRoot": "../cloud/",
+  "projectname": "weapp-guitar",
+  "description": "自学吉他",
+  "appid": "wxbac2553xxxxxxxxx",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
+}

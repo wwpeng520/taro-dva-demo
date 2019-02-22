@@ -1,0 +1,19 @@
+@import "../../styles/mixin";
+
+.separator-comp {
+  position: relative;
+  border: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background: #e7e7e7;
+    width: 100%;
+    height: 1Px;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+}

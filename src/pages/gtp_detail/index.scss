@@ -1,0 +1,111 @@
+@import "../../styles/mixin";
+
+.detail-page {
+  @include wh(100%, 100%);
+  background-color: $color-bg-light;
+
+  .reload-btn {
+    @include flex();
+    margin-top: 10px;
+    border-color: #999999;
+    background-color: transparent;
+  }
+
+  .btn-line {
+    @include flex(row, center, flex-end);
+    width: 100%;
+
+    .cancel-btn {
+      border: none;
+      background-color: transparent;
+      color: $color-dark2;
+    }
+
+    .login-btn {
+      border: none;
+      background-color: transparent;
+      color: $color-primary;
+    }
+  }
+
+  .detail-box {
+    @include flex(column);
+    padding: $padding-lg;
+    padding-bottom: 100px;
+    background-color: #fff;
+
+    .title {
+      font-size: $font-size-lg;
+      text-align: center;
+    }
+
+    .icon-boxes {
+      @include flex(row, center, flex-end);
+      width: 100%;
+    }
+
+    .icon-box {
+      @include flex();
+      padding: $padding-md;
+      margin-left: $padding-sm;
+    }
+
+    .icon-text {
+      margin-left: $padding-sm;
+      font-size: $font-size-sm;
+      color: $color-light;
+    }
+
+    .description {
+      padding: $font-size-lg;
+      padding-top: 0;
+      text-indent: 2em;
+      font-size: $font-size-md;
+      line-height: 44px;
+      color: $color-dark2;
+    }
+
+    .bottom-player-box {
+      @include flex();
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      padding: 0 $padding-md;
+      background: -webkit-linear-gradient($color-base-light, $color-base-dark);
+      background: -o-linear-gradient($color-base-light, $color-base-dark);
+      background: -moz-linear-gradient($color-base-light, $color-base-dark);
+      background: linear-gradient($color-base-light, $color-base-dark);
+      color: #fff;
+      z-index: 9;
+
+      .player-icon-box {
+        @include flex();
+        position: relative;
+        width: 80px;
+        height: 100%;
+
+        .player-icon-bg {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+        }
+      }
+
+      .player-slider {
+        flex: 1;
+      }
+
+      .player-time {
+        width: 164px;
+        text-align: center;
+        font-size: $font-size-md;
+      }
+    }
+  }
+
+
+}

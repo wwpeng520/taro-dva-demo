@@ -1,0 +1,21 @@
+@import "../../styles/mixin";
+
+.whitespace-xs {
+  height: $spacing-xs;
+}
+
+.whitespace-sm {
+  height: $spacing-sm;
+}
+
+.whitespace-md {
+  height: $spacing-md;
+}
+
+.whitespace-lg {
+  height: $spacing-lg;
+}
+
+.whitespace-xl {
+  height: $spacing-xl;
+}

@@ -1,0 +1,35 @@
+@import "../../styles/mixin";
+
+.settings-page {
+  @include wh(100%, 100%);
+  background-color: #fff;
+
+  .list-item.at-list__item {
+    font-size: $font-size-lg;
+    padding-top: $padding-sm;
+    padding-bottom: $padding-sm;
+
+    .item-content {
+      &__info {
+        &-note {
+          font-size: $font-size-sm;
+        }
+      }
+    }
+
+    .item-extra {
+      &__info {
+        font-size: $font-size-sm;
+        font-weight: 300;
+        color: $color-dark2;
+      }
+    }
+  }
+
+  .logout-btn {
+    position: fixed;
+    bottom: 0;
+    background-color: #E94E51;
+    border-color: #E94E51;
+  }
+}

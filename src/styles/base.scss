@@ -1,0 +1,213 @@
+@import "./mixin";
+@import "./iconfont";
+
+page,
+body {
+  font-size: 32px;
+  height: 100%;
+  background-color: $bg-color-light;
+  color: $color-dark;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 500px) {
+
+  html,
+  body {
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+.taro-img,
+image {
+  width: 100%;
+}
+
+button {
+  outline: none;
+}
+
+//******常用类******/
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.position-center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+}
+
+.padding-horizontal-sm {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.padding-horizontal-md {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.padding-horizontal-lg {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.padding-horizontal-xl {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.padding-vertical-sm {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.padding-vertical-md {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.padding-vertical-lg {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.padding-vertical-xl {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+// 文本一行显示
+.text-one-line {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.border-line-1px {
+  position: relative;
+  border: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background: $color-border-light;
+    width: 100%;
+    height: 1Px;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+}
+
+.border-box-1px {
+  position: relative;
+  border: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1Px solid $color-border-light;
+    border-radius: 6px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+  }
+}
+
+.box-content-center {
+  @include flex();
+  width: 100%;
+  height: 100%;
+}
+
+.flex-row {
+  @include flex(row);
+}
+
+.flex-column {
+  @include flex(column);
+}
+
+.rotate-box {
+  @include flex();
+  -webkit-animation: myRotate 2s linear infinite;
+  animation: myRotate 2s linear infinite;
+}
+
+@-webkit-keyframes myRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes myRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
